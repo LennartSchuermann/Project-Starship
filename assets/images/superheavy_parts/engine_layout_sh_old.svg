@@ -1,0 +1,34 @@
+<svg width="105" height="105" viewBox="0 0 105 105" fill="none" xmlns="http://www.w3.org/2000/svg">
+<circle cx="52" cy="52" r="45.5" stroke="white" stroke-width="3"/>
+<circle cx="52" cy="52" r="45.5" stroke="white" stroke-width="3"/>
+<circle cx="52" cy="52" r="24" stroke="white" stroke-width="2"/>
+<circle cx="76.5" cy="60.5" r="7" fill="white" stroke="black"/>
+<circle cx="52.5" cy="51.5" r="7" fill="white" stroke="black"/>
+<circle cx="76.5" cy="42.5" r="7" fill="white" stroke="black"/>
+<circle cx="28.5" cy="60.5" r="7" fill="white" stroke="black"/>
+<circle cx="28.5" cy="42.5" r="7" fill="white" stroke="black"/>
+<circle cx="43.5" cy="75.5" r="7" transform="rotate(90 43.5 75.5)" fill="white" stroke="black"/>
+<circle cx="61.5" cy="75.5" r="7" transform="rotate(90 61.5 75.5)" fill="white" stroke="black"/>
+<circle cx="43.5" cy="27.5" r="7" transform="rotate(90 43.5 27.5)" fill="white" stroke="black"/>
+<circle cx="52.5" cy="7.5" r="7" transform="rotate(90 52.5 7.5)" fill="white" stroke="black"/>
+<circle cx="66.5" cy="9.5" r="7" transform="rotate(90 66.5 9.5)" fill="white" stroke="black"/>
+<circle cx="80.5" cy="15.5" r="7" transform="rotate(90 80.5 15.5)" fill="white" stroke="black"/>
+<circle cx="90.5" cy="25.5" r="7" transform="rotate(90 90.5 25.5)" fill="white" stroke="black"/>
+<circle cx="97.5" cy="52.5" r="7" transform="rotate(90 97.5 52.5)" fill="white" stroke="black"/>
+<circle cx="96.5" cy="38.5" r="7" transform="rotate(90 96.5 38.5)" fill="white" stroke="black"/>
+<path d="M52.5 90.5C48.634 90.5 45.5 93.634 45.5 97.5C45.5 101.366 48.634 104.5 52.5 104.5C56.366 104.5 59.5 101.366 59.5 97.5C59.5 93.634 56.366 90.5 52.5 90.5Z" fill="white" stroke="black"/>
+<path d="M66.5 88.5C62.6639 88.5 59.5 91.827 59.5 96C59.5 100.173 62.6639 103.5 66.5 103.5C70.3361 103.5 73.5 100.173 73.5 96C73.5 91.827 70.3361 88.5 66.5 88.5Z" fill="white" stroke="black"/>
+<path d="M80.5 83.5C76.601 83.5 73.5 86.4421 73.5 90C73.5 93.5579 76.601 96.5 80.5 96.5C84.399 96.5 87.5 93.5579 87.5 90C87.5 86.4421 84.399 83.5 80.5 83.5Z" fill="white" stroke="black"/>
+<path d="M90.5 72.5C86.634 72.5 83.5 75.634 83.5 79.5C83.5 83.366 86.634 86.5 90.5 86.5C94.366 86.5 97.5 83.366 97.5 79.5C97.5 75.634 94.366 72.5 90.5 72.5Z" fill="white" stroke="black"/>
+<path d="M96.5 59.5C92.634 59.5 89.5 62.634 89.5 66.5C89.5 70.366 92.634 73.5 96.5 73.5C100.366 73.5 103.5 70.366 103.5 66.5C103.5 62.634 100.366 59.5 96.5 59.5Z" fill="white" stroke="black"/>
+<path d="M38.5 16.5C42.366 16.5 45.5 13.366 45.5 9.5C45.5 5.63401 42.366 2.5 38.5 2.5C34.634 2.5 31.5 5.63401 31.5 9.5C31.5 13.366 34.634 16.5 38.5 16.5Z" fill="white" stroke="black"/>
+<path d="M24.5 22.5C28.366 22.5 31.5 19.366 31.5 15.5C31.5 11.634 28.366 8.5 24.5 8.5C20.634 8.5 17.5 11.634 17.5 15.5C17.5 19.366 20.634 22.5 24.5 22.5Z" fill="white" stroke="black"/>
+<path d="M14.5 32.5C18.366 32.5 21.5 29.366 21.5 25.5C21.5 21.634 18.366 18.5 14.5 18.5C10.634 18.5 7.5 21.634 7.5 25.5C7.5 29.366 10.634 32.5 14.5 32.5Z" fill="white" stroke="black"/>
+<path d="M7.5 59.5C11.366 59.5 14.5 56.366 14.5 52.5C14.5 48.634 11.366 45.5 7.5 45.5C3.63401 45.5 0.5 48.634 0.5 52.5C0.5 56.366 3.63401 59.5 7.5 59.5Z" fill="white" stroke="black"/>
+<path d="M8.5 45.5C12.366 45.5 15.5 42.366 15.5 38.5C15.5 34.634 12.366 31.5 8.5 31.5C4.63401 31.5 1.5 34.634 1.5 38.5C1.5 42.366 4.63401 45.5 8.5 45.5Z" fill="white" stroke="black"/>
+<path d="M38.5 88.5C42.3361 88.5 45.5 91.827 45.5 96C45.5 100.173 42.3361 103.5 38.5 103.5C34.6639 103.5 31.5 100.173 31.5 96C31.5 91.827 34.6639 88.5 38.5 88.5Z" fill="white" stroke="black"/>
+<path d="M24.5 83.5C28.399 83.5 31.5 86.4421 31.5 90C31.5 93.5579 28.399 96.5 24.5 96.5C20.601 96.5 17.5 93.5579 17.5 90C17.5 86.4421 20.601 83.5 24.5 83.5Z" fill="white" stroke="black"/>
+<path d="M14.5 72.5C18.366 72.5 21.5 75.634 21.5 79.5C21.5 83.366 18.366 86.5 14.5 86.5C10.634 86.5 7.5 83.366 7.5 79.5C7.5 75.634 10.634 72.5 14.5 72.5Z" fill="white" stroke="black"/>
+<path d="M8.5 59.5C12.366 59.5 15.5 62.634 15.5 66.5C15.5 70.366 12.366 73.5 8.5 73.5C4.63401 73.5 1.5 70.366 1.5 66.5C1.5 62.634 4.63401 59.5 8.5 59.5Z" fill="white" stroke="black"/>
+<circle cx="61.5" cy="27.5" r="7" transform="rotate(90 61.5 27.5)" fill="white" stroke="black"/>
+</svg>
