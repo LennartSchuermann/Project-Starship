@@ -10,7 +10,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:tankwatcher/Screens/ContactScreen.dart';
 import 'package:tankwatcher/Utils/openUrl.dart';
 import 'package:tankwatcher/constants.dart';
-import '../design.dart';
+import 'package:tankwatcher/design.dart';
 
 class AboutScreen extends StatelessWidget {
   AboutScreen({Key? key, required this.lastDataUpdateDate}) : super(key: key);

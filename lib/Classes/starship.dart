@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_multiple_declarations_per_line
+
 class Starship {
   String serialnumber, status, location, imgsource, imglink, purpose;
   int cryoproof, staticfire, flights, landings, boosternr;

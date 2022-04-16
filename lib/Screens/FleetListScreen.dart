@@ -3,7 +3,6 @@
 // Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 
 // Project imports:
 import 'package:tankwatcher/Classes/starship.dart';
@@ -11,7 +10,7 @@ import 'package:tankwatcher/Classes/superheavy.dart';
 import 'package:tankwatcher/Screens/InfoScreen.dart';
 import 'package:tankwatcher/Widgets/StarshipCard.dart';
 import 'package:tankwatcher/Widgets/SuperheavyCard.dart';
-import '../design.dart';
+import 'package:tankwatcher/design.dart';
 
 class FleetListScreen extends StatefulWidget {
   FleetListScreen(

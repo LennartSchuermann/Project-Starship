@@ -4,10 +4,10 @@
 import 'package:flutter/material.dart';
 
 // Project imports:
+import 'package:tankwatcher/Screens/HomeScreen.dart';
 import 'package:tankwatcher/Screens/LoadingScreen.dart';
 import 'package:tankwatcher/Utils/scraper.dart';
 import 'package:tankwatcher/design.dart';
-import 'Screens/HomeScreen.dart';
 
 void main() {
   runApp(const TankWatcherApp());

@@ -1,4 +1,4 @@
-// ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
+// ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable, avoid_multiple_declarations_per_line
 
 // Flutter imports:
 import 'package:flutter/cupertino.dart';
@@ -25,7 +25,6 @@ class StarshipCard extends StatelessWidget {
       width: MediaQuery.of(context).size.width - (2 * kDefaultPadding),
       height: 190,
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
           //IMG DIAGRAM
@@ -71,7 +70,6 @@ class StarshipCard extends StatelessWidget {
                 //SHORT STATS
                 Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     //DIAGRAM (engine_layout_dummy.svg)
                     StarshipEngineDiagram(starship: starship),
@@ -102,9 +100,12 @@ class StarshipCard extends StatelessWidget {
 }
 
 class StarshipEngineDiagram extends StatelessWidget {
-  const StarshipEngineDiagram(
-      {Key? key, required this.starship, this.height, this.width})
-      : super(key: key);
+  const StarshipEngineDiagram({
+    Key? key,
+    required this.starship,
+    this.height,
+    this.width,
+  }) : super(key: key);
 
   final Starship starship;
   final double? width, height;

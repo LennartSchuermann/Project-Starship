@@ -10,7 +10,7 @@ import 'package:tankwatcher/Classes/superheavy.dart';
 import 'package:tankwatcher/Widgets/IconStats.dart';
 import 'package:tankwatcher/Widgets/StarshipCard.dart';
 import 'package:tankwatcher/Widgets/SuperheavyCard.dart';
-import '../design.dart';
+import 'package:tankwatcher/design.dart';
 
 class InfoScreen extends StatelessWidget {
   InfoScreen(

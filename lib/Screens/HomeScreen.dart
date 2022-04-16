@@ -16,9 +16,9 @@ import 'package:tankwatcher/Utils/scraper.dart';
 import 'package:tankwatcher/Widgets/StarshipCard.dart';
 import 'package:tankwatcher/Widgets/SuperheavyCard.dart';
 import 'package:tankwatcher/Widgets/scrollWidget.dart';
-import '../design.dart';
+import 'package:tankwatcher/design.dart';
 
-var starship_service = StarshipService();
+StarshipService starship_service = StarshipService();
 
 class HomeScreen extends StatefulWidget {
   HomeScreen(

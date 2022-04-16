@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_multiple_declarations_per_line
+
 class Events {
   String date, title, location;
   bool isDone;

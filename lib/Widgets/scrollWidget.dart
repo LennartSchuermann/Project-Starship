@@ -11,7 +11,7 @@ import 'package:tankwatcher/Classes/superheavy.dart';
 import 'package:tankwatcher/Screens/AboutScreen.dart';
 import 'package:tankwatcher/Screens/FleetListScreen.dart';
 import 'package:tankwatcher/Screens/NewsScreen.dart';
-import '../design.dart';
+import 'package:tankwatcher/design.dart';
 
 class ScrollWidget extends StatefulWidget {
   ScrollWidget({
