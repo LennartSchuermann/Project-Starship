@@ -1,19 +1,23 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
 import 'package:flutter/services.dart';
+
+// Package imports:
 import 'package:sliding_up_panel/sliding_up_panel.dart';
+
+// Project imports:
 import 'package:tankwatcher/Classes/fetchservice.dart';
 import 'package:tankwatcher/Screens/InfoScreen.dart';
 import 'package:tankwatcher/Utils/dateHandling.dart';
 import 'package:tankwatcher/Utils/parts.dart';
 import 'package:tankwatcher/Utils/scraper.dart';
-import 'package:tankwatcher/Widgets/scrollWidget.dart';
 import 'package:tankwatcher/Widgets/StarshipCard.dart';
 import 'package:tankwatcher/Widgets/SuperheavyCard.dart';
-
+import 'package:tankwatcher/Widgets/scrollWidget.dart';
 import '../design.dart';
 
 var starship_service = StarshipService();

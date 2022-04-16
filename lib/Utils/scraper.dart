@@ -1,8 +1,11 @@
 // ignore_for_file: avoid_print
 
+// Package imports:
+import 'package:web_scraper/web_scraper.dart';
+
+// Project imports:
 import 'package:tankwatcher/Classes/fetchservice.dart';
 import 'package:tankwatcher/design.dart';
-import 'package:web_scraper/web_scraper.dart';
 
 final webScraper = WebScraper('https://www.cameroncountytx.gov/');
 

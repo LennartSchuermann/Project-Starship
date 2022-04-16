@@ -1,10 +1,15 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
+// Dart imports:
 import 'dart:convert';
 
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:http/http.dart' as http;
 
+// Project imports:
 import '../../design.dart';
 
 class ContactWidget extends StatefulWidget {

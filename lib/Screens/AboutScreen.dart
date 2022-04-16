@@ -1,13 +1,17 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+
+// Package imports:
 import 'package:flutter_svg/svg.dart';
+
+// Project imports:
 import 'package:tankwatcher/Screens/ContactScreen.dart';
 import 'package:tankwatcher/Utils/openUrl.dart';
 import 'package:tankwatcher/constants.dart';
-
 import '../design.dart';
 
 class AboutScreen extends StatelessWidget {

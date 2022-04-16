@@ -1,7 +1,12 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
+
+// Package imports:
 import 'package:intl/intl.dart';
+
+// Project imports:
 import 'package:tankwatcher/Utils/scraper.dart';
 
 String getDayOfMonthSuffix(int dayNum) {

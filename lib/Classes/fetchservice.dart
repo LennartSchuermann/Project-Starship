@@ -1,9 +1,14 @@
 // ignore_for_file: non_constant_identifier_names, avoid_print
-import 'package:http/http.dart' as http;
-import 'package:tankwatcher/Classes/events.dart';
-import 'package:tankwatcher/Classes/log.dart';
+
+// Dart imports:
 import 'dart:convert' as convert;
 
+// Package imports:
+import 'package:http/http.dart' as http;
+
+// Project imports:
+import 'package:tankwatcher/Classes/events.dart';
+import 'package:tankwatcher/Classes/log.dart';
 import 'package:tankwatcher/Classes/starship.dart';
 import 'package:tankwatcher/Classes/superheavy.dart';
 import 'package:tankwatcher/design.dart';

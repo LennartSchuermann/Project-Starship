@@ -1,15 +1,17 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+
+// Project imports:
 import 'package:tankwatcher/Classes/starship.dart';
 import 'package:tankwatcher/Classes/superheavy.dart';
 import 'package:tankwatcher/Screens/AboutScreen.dart';
 import 'package:tankwatcher/Widgets/IconStats.dart';
 import 'package:tankwatcher/Widgets/StarshipCard.dart';
 import 'package:tankwatcher/Widgets/SuperheavyCard.dart';
-
 import '../design.dart';
 
 class InfoScreen extends StatelessWidget {

@@ -1,8 +1,13 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:flutter_svg/flutter_svg.dart';
+
+// Project imports:
 import 'package:tankwatcher/Classes/superheavy.dart';
 import 'package:tankwatcher/Utils/parts.dart';
 import 'package:tankwatcher/Widgets/IconStats.dart';

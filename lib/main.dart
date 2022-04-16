@@ -1,10 +1,13 @@
 // ignore_for_file: file_names
+
+// Flutter imports:
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+
+// Project imports:
 import 'package:tankwatcher/Screens/LoadingScreen.dart';
 import 'package:tankwatcher/Utils/scraper.dart';
 import 'package:tankwatcher/design.dart';
-
 import 'Screens/HomeScreen.dart';
 
 void main() {
