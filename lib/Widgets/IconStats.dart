@@ -1,7 +1,6 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
 // Flutter imports:
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 // Package imports:
@@ -37,12 +36,12 @@ class IconStats extends StatelessWidget {
                 width: 28,
                 height: 28,
                 child: SvgPicture.asset(
-                  'assets/images/' + img_source + '.svg',
+                  'assets/images/$img_source.svg',
                   color: Theme.of(context).focusColor,
                 ),
               ),
         Text(
-          amount.toString() + "x",
+          "${amount}x",
           style: TextStyle(
             color: Theme.of(context).focusColor,
             fontFamily: 'Roboto',

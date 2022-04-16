@@ -39,9 +39,10 @@ class _FleetListScreenState extends State<FleetListScreen> {
         children: [
           Padding(
             padding: const EdgeInsets.only(
-                top: kDefaultPadding * 3,
-                left: kDefaultPadding,
-                right: kDefaultPadding),
+              top: kDefaultPadding * 3,
+              left: kDefaultPadding,
+              right: kDefaultPadding,
+            ),
             child: Column(
               children: [
                 //TITLE
@@ -97,43 +98,45 @@ class _FleetListScreenState extends State<FleetListScreen> {
                       : widget.superheavys.length,
                   itemBuilder: (context, i) {
                     return Padding(
-                        padding: EdgeInsets.only(
-                            bottom: widget.isStarshipList
-                                ? kDefaultPadding / 6
-                                : kDefaultPadding),
-                        child: widget.isStarshipList
-                            ? GestureDetector(
-                                child: StarshipCard(
-                                  starship: widget.starships[i],
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => InfoScreen(
-                                        isStarshipInfo: true,
-                                        starship: widget.starships[i],
-                                      ),
+                      padding: EdgeInsets.only(
+                        bottom: widget.isStarshipList
+                            ? kDefaultPadding / 6
+                            : kDefaultPadding,
+                      ),
+                      child: widget.isStarshipList
+                          ? GestureDetector(
+                              child: StarshipCard(
+                                starship: widget.starships[i],
+                              ),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => InfoScreen(
+                                      isStarshipInfo: true,
+                                      starship: widget.starships[i],
                                     ),
-                                  );
-                                },
-                              )
-                            : GestureDetector(
-                                child: SuperHeavyCard(
-                                  superheavy: widget.superheavys[i],
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => InfoScreen(
-                                        isStarshipInfo: false,
-                                        superheavy: widget.superheavys[i],
-                                      ),
+                                  ),
+                                );
+                              },
+                            )
+                          : GestureDetector(
+                              child: SuperHeavyCard(
+                                superheavy: widget.superheavys[i],
+                              ),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => InfoScreen(
+                                      isStarshipInfo: false,
+                                      superheavy: widget.superheavys[i],
                                     ),
-                                  );
-                                },
-                              ));
+                                  ),
+                                );
+                              },
+                            ),
+                    );
                   },
                 ),
               ],

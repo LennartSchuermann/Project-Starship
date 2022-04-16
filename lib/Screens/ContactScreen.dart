@@ -63,7 +63,9 @@ class _ContactWidgetState extends State<ContactWidget> {
       resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.only(
-            left: kDefaultPadding, right: kDefaultPadding),
+          left: kDefaultPadding,
+          right: kDefaultPadding,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -104,9 +106,9 @@ class _ContactWidgetState extends State<ContactWidget> {
                 mail = mailController.text.toString();
                 msg = msgController.text.toString();
 
-                print("title:" + title);
-                print("mail:" + mail);
-                print("msg:" + msg);
+                print("title:$title");
+                print("mail:$mail");
+                print("msg:$msg");
 
                 if (titleController.text.isNotEmpty &&
                     msgController.text.isNotEmpty) {

@@ -4,22 +4,23 @@ class Superheavy {
   List parts, sea;
   bool isFleet;
 
-  Superheavy(
-      {required this.serialnumber,
-      required this.status,
-      required this.location,
-      required this.imglink,
-      required this.imgsource,
-      required this.cryoproof,
-      required this.staticfire,
-      required this.flights,
-      required this.landings,
-      required this.starshipnr,
-      required this.parts,
-      required this.sea,
-      required this.isFleet,
-      required this.raptorCount,
-      required this.purpose});
+  Superheavy({
+    required this.serialnumber,
+    required this.status,
+    required this.location,
+    required this.imglink,
+    required this.imgsource,
+    required this.cryoproof,
+    required this.staticfire,
+    required this.flights,
+    required this.landings,
+    required this.starshipnr,
+    required this.parts,
+    required this.sea,
+    required this.isFleet,
+    required this.raptorCount,
+    required this.purpose,
+  });
 
   Superheavy.fromJson(Map<dynamic, dynamic> parsedJson)
       : serialnumber = parsedJson['serialnumber'],

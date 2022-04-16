@@ -42,14 +42,13 @@ Future<String> getClosures() async {
         final String newid =
             item.replaceAll('id="', "").replaceAll('"', "") as String;
         //print(newid);
-        final String newAdress = "#" +
-            newid +
-            "> div > div > div > div.gem-table.gem-table-responsive.gem-table-style-1 > table > tbody'";
+        final String newAdress =
+            "#$newid> div > div > div > div.gem-table.gem-table-responsive.gem-table-style-1 > table > tbody'";
 
         elements = webScraper.getElement(newAdress, []);
 
         if (elements.isNotEmpty) {
-          print("1/" + kMaxLoadingSteps + " | Done");
+          print("1/$kMaxLoadingSteps | Done");
           rightElements = elements;
         }
       }

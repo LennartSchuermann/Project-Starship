@@ -3,12 +3,10 @@
 // Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/painting.dart';
 
 // Project imports:
 import 'package:tankwatcher/Classes/starship.dart';
 import 'package:tankwatcher/Classes/superheavy.dart';
-import 'package:tankwatcher/Screens/AboutScreen.dart';
 import 'package:tankwatcher/Widgets/IconStats.dart';
 import 'package:tankwatcher/Widgets/StarshipCard.dart';
 import 'package:tankwatcher/Widgets/SuperheavyCard.dart';
@@ -69,9 +67,10 @@ class InfoScreen extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(
-                top: kDefaultPadding * 3,
-                left: kDefaultPadding,
-                right: kDefaultPadding),
+              top: kDefaultPadding * 3,
+              left: kDefaultPadding,
+              right: kDefaultPadding,
+            ),
             child: Column(
               children: [
                 //TITLE
@@ -123,15 +122,17 @@ class InfoScreen extends StatelessWidget {
                       MediaQuery.of(context).size.width - (kDefaultPadding / 2),
                   height: 250,
                   decoration: BoxDecoration(
-                      border: Border.all(
-                        color: Theme.of(context).focusColor,
-                        width: 1.2,
-                      ),
-                      borderRadius: BorderRadius.circular(kDefaultPadding)),
+                    border: Border.all(
+                      color: Theme.of(context).focusColor,
+                      width: 1.2,
+                    ),
+                    borderRadius: BorderRadius.circular(kDefaultPadding),
+                  ),
                   child: imgLink() != ""
                       ? ClipRRect(
                           borderRadius: BorderRadius.circular(
-                              kDefaultPadding - kDefaultPadding * 0.1),
+                            kDefaultPadding - kDefaultPadding * 0.1,
+                          ),
                           child: Stack(
                             children: [
                               FadeInImage.assetNetwork(
@@ -149,7 +150,8 @@ class InfoScreen extends StatelessWidget {
                                 alignment: Alignment.bottomLeft,
                                 child: Padding(
                                   padding: const EdgeInsets.only(
-                                      left: kDefaultPadding / 2),
+                                    left: kDefaultPadding / 2,
+                                  ),
                                   child: Text(
                                     isStarshipInfo
                                         ? starship!.imgsource
@@ -166,7 +168,8 @@ class InfoScreen extends StatelessWidget {
                                 ),
                               ),
                             ],
-                          ))
+                          ),
+                        )
                       : Center(
                           child: Text(
                             "No Image yet!",
@@ -183,7 +186,9 @@ class InfoScreen extends StatelessWidget {
                 //UPDATE STATS
                 Padding(
                   padding: const EdgeInsets.only(
-                      left: kDefaultPadding, right: kDefaultPadding),
+                    left: kDefaultPadding,
+                    right: kDefaultPadding,
+                  ),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -250,8 +255,8 @@ class InfoScreen extends StatelessWidget {
                             children: [
                               Text(
                                 isStarshipInfo
-                                    ? "Status: " + starship!.status
-                                    : "Status: " + superheavy!.status,
+                                    ? "Status: ${starship!.status}"
+                                    : "Status: ${superheavy!.status}",
                                 style: TextStyle(
                                   fontFamily: 'Roboto',
                                   fontSize: kFontSize,
@@ -263,12 +268,10 @@ class InfoScreen extends StatelessWidget {
                                 isStarshipInfo
                                     ? starship!.boosternr == 0
                                         ? "Booster Pair: -"
-                                        : "Booster Pair: B" +
-                                            starship!.boosternr.toString()
+                                        : "Booster Pair: B${starship!.boosternr}"
                                     : superheavy!.starshipnr == 0
                                         ? "Starship Pair: -"
-                                        : "Starship Pair: S" +
-                                            superheavy!.starshipnr.toString(),
+                                        : "Starship Pair: S${superheavy!.starshipnr}",
                                 style: TextStyle(
                                   fontFamily: 'Roboto',
                                   fontSize: kFontSize,
@@ -278,9 +281,8 @@ class InfoScreen extends StatelessWidget {
                               ),
                               Text(
                                 isStarshipInfo
-                                    ? "Purpose: " + starship!.purpose.toString()
-                                    : "Purpose: " +
-                                        superheavy!.purpose.toString(),
+                                    ? "Purpose: ${starship!.purpose}"
+                                    : "Purpose: ${superheavy!.purpose}",
                                 style: TextStyle(
                                   fontFamily: 'Roboto',
                                   fontSize: kFontSize,

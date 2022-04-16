@@ -42,9 +42,10 @@ class EventsScreen extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(
-                top: kDefaultPadding * 3,
-                left: kDefaultPadding,
-                right: kDefaultPadding),
+              top: kDefaultPadding * 3,
+              left: kDefaultPadding,
+              right: kDefaultPadding,
+            ),
             child: Column(
               children: [
                 //TITLE
