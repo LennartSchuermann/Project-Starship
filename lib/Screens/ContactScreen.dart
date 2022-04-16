@@ -1,10 +1,15 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
+// Dart imports:
 import 'dart:convert';
 
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:http/http.dart' as http;
 
+// Project imports:
 import '../../design.dart';
 
 class ContactWidget extends StatefulWidget {
@@ -58,7 +63,9 @@ class _ContactWidgetState extends State<ContactWidget> {
       resizeToAvoidBottomInset: false,
       body: Padding(
         padding: const EdgeInsets.only(
-            left: kDefaultPadding, right: kDefaultPadding),
+          left: kDefaultPadding,
+          right: kDefaultPadding,
+        ),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
@@ -99,9 +106,9 @@ class _ContactWidgetState extends State<ContactWidget> {
                 mail = mailController.text.toString();
                 msg = msgController.text.toString();
 
-                print("title:" + title);
-                print("mail:" + mail);
-                print("msg:" + msg);
+                print("title:$title");
+                print("mail:$mail");
+                print("msg:$msg");
 
                 if (titleController.text.isNotEmpty &&
                     msgController.text.isNotEmpty) {

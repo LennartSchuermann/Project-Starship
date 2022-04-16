@@ -1,14 +1,16 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/painting.dart';
+
+// Project imports:
 import 'package:tankwatcher/Classes/starship.dart';
 import 'package:tankwatcher/Classes/superheavy.dart';
 import 'package:tankwatcher/Screens/InfoScreen.dart';
 import 'package:tankwatcher/Widgets/StarshipCard.dart';
 import 'package:tankwatcher/Widgets/SuperheavyCard.dart';
-
 import '../design.dart';
 
 class FleetListScreen extends StatefulWidget {
@@ -37,9 +39,10 @@ class _FleetListScreenState extends State<FleetListScreen> {
         children: [
           Padding(
             padding: const EdgeInsets.only(
-                top: kDefaultPadding * 3,
-                left: kDefaultPadding,
-                right: kDefaultPadding),
+              top: kDefaultPadding * 3,
+              left: kDefaultPadding,
+              right: kDefaultPadding,
+            ),
             child: Column(
               children: [
                 //TITLE
@@ -95,43 +98,45 @@ class _FleetListScreenState extends State<FleetListScreen> {
                       : widget.superheavys.length,
                   itemBuilder: (context, i) {
                     return Padding(
-                        padding: EdgeInsets.only(
-                            bottom: widget.isStarshipList
-                                ? kDefaultPadding / 6
-                                : kDefaultPadding),
-                        child: widget.isStarshipList
-                            ? GestureDetector(
-                                child: StarshipCard(
-                                  starship: widget.starships[i],
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => InfoScreen(
-                                        isStarshipInfo: true,
-                                        starship: widget.starships[i],
-                                      ),
+                      padding: EdgeInsets.only(
+                        bottom: widget.isStarshipList
+                            ? kDefaultPadding / 6
+                            : kDefaultPadding,
+                      ),
+                      child: widget.isStarshipList
+                          ? GestureDetector(
+                              child: StarshipCard(
+                                starship: widget.starships[i],
+                              ),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => InfoScreen(
+                                      isStarshipInfo: true,
+                                      starship: widget.starships[i],
                                     ),
-                                  );
-                                },
-                              )
-                            : GestureDetector(
-                                child: SuperHeavyCard(
-                                  superheavy: widget.superheavys[i],
-                                ),
-                                onTap: () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) => InfoScreen(
-                                        isStarshipInfo: false,
-                                        superheavy: widget.superheavys[i],
-                                      ),
+                                  ),
+                                );
+                              },
+                            )
+                          : GestureDetector(
+                              child: SuperHeavyCard(
+                                superheavy: widget.superheavys[i],
+                              ),
+                              onTap: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                    builder: (context) => InfoScreen(
+                                      isStarshipInfo: false,
+                                      superheavy: widget.superheavys[i],
                                     ),
-                                  );
-                                },
-                              ));
+                                  ),
+                                );
+                              },
+                            ),
+                    );
                   },
                 ),
               ],

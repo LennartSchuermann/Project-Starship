@@ -1,4 +1,4 @@
-import 'package:flutter/cupertino.dart';
+// Flutter imports:
 import 'package:flutter/material.dart';
 
 const String kAppVersion = "1.2.0";

@@ -1,6 +1,9 @@
 // ignore_for_file: file_names
 
+// Flutter imports:
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:tankwatcher/design.dart';
 
 class LoadingScreen extends StatefulWidget {

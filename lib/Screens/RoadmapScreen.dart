@@ -1,7 +1,10 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+// Project imports:
 import 'package:tankwatcher/Classes/log.dart';
 import 'package:tankwatcher/design.dart';
 
@@ -21,9 +24,10 @@ class Roadmap extends StatelessWidget {
         children: [
           Padding(
             padding: const EdgeInsets.only(
-                top: kDefaultPadding * 3,
-                left: kDefaultPadding,
-                right: kDefaultPadding),
+              top: kDefaultPadding * 3,
+              left: kDefaultPadding,
+              right: kDefaultPadding,
+            ),
             child: Column(
               children: [
                 //TITLE
@@ -64,7 +68,6 @@ class Roadmap extends StatelessWidget {
                               ],
                               begin: Alignment.topCenter,
                               end: Alignment.bottomCenter,
-                              tileMode: TileMode.clamp,
                             ),
                           ),
                         ),
@@ -77,7 +80,6 @@ class Roadmap extends StatelessWidget {
                     ),
                     ListView.builder(
                       physics: const BouncingScrollPhysics(),
-                      scrollDirection: Axis.vertical,
                       shrinkWrap: true,
                       padding: const EdgeInsets.only(top: kDefaultPadding / 4),
                       itemCount: activityLogs.length,
@@ -113,7 +115,6 @@ class ChangesCard extends StatelessWidget {
       padding: const EdgeInsets.only(bottom: kDefaultPadding / 2),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           //DATES
           SizedBox(
@@ -138,12 +139,12 @@ class ChangesCard extends StatelessWidget {
               width: kDefaultPadding / 2,
               height: kDefaultPadding / 2,
               decoration: BoxDecoration(
-                  border: Border.all(
-                    color: Theme.of(context).backgroundColor,
-                    width: 1,
-                  ),
-                  color: Theme.of(context).focusColor,
-                  shape: BoxShape.circle),
+                border: Border.all(
+                  color: Theme.of(context).backgroundColor,
+                ),
+                color: Theme.of(context).focusColor,
+                shape: BoxShape.circle,
+              ),
             ),
           ),
           //CHANGES

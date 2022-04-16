@@ -1,8 +1,13 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+
+// Package imports:
 import 'package:flutter_svg/flutter_svg.dart';
+
+// Project imports:
 import 'package:tankwatcher/Classes/superheavy.dart';
 import 'package:tankwatcher/Utils/parts.dart';
 import 'package:tankwatcher/Widgets/IconStats.dart';
@@ -20,86 +25,84 @@ class SuperHeavyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        color: Theme.of(context).backgroundColor,
-        width: MediaQuery.of(context).size.width - (2 * kDefaultPadding),
-        height: 220,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: [
-            //IMG DIAGRAM
-            SizedBox(
-                width: (MediaQuery.of(context).size.width -
-                        (2 * kDefaultPadding)) /
-                    3,
-                child: SuperHeavyPartsDiagram(superheavy: superheavy)),
-            //STATS CONTAINER
-            SizedBox(
-              width:
-                  (MediaQuery.of(context).size.width - (2 * kDefaultPadding)) *
-                      (2 / 3),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.end,
-                    children: [
-                      //SERAIAL NUMBER
-                      Text(
-                        superheavy.serialnumber,
-                        style: TextStyle(
-                          color: Theme.of(context).focusColor,
-                          fontFamily: 'Roboto',
-                          fontSize: kScndTitleSize,
-                          fontWeight: FontWeight.w100,
-                        ),
+      color: Theme.of(context).backgroundColor,
+      width: MediaQuery.of(context).size.width - (2 * kDefaultPadding),
+      height: 220,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+        children: [
+          //IMG DIAGRAM
+          SizedBox(
+            width:
+                (MediaQuery.of(context).size.width - (2 * kDefaultPadding)) / 3,
+            child: SuperHeavyPartsDiagram(superheavy: superheavy),
+          ),
+          //STATS CONTAINER
+          SizedBox(
+            width: (MediaQuery.of(context).size.width - (2 * kDefaultPadding)) *
+                (2 / 3),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  crossAxisAlignment: CrossAxisAlignment.end,
+                  children: [
+                    //SERAIAL NUMBER
+                    Text(
+                      superheavy.serialnumber,
+                      style: TextStyle(
+                        color: Theme.of(context).focusColor,
+                        fontFamily: 'Roboto',
+                        fontSize: kScndTitleSize,
+                        fontWeight: FontWeight.w100,
                       ),
-                      //LOCATION
-                      Text(
-                        superheavy.location,
-                        style: TextStyle(
-                          color: Theme.of(context).focusColor.withOpacity(0.6),
-                          fontFamily: 'Roboto',
-                          fontSize: kDesFontSize,
-                          fontWeight: FontWeight.w100,
-                        ),
+                    ),
+                    //LOCATION
+                    Text(
+                      superheavy.location,
+                      style: TextStyle(
+                        color: Theme.of(context).focusColor.withOpacity(0.6),
+                        fontFamily: 'Roboto',
+                        fontSize: kDesFontSize,
+                        fontWeight: FontWeight.w100,
                       ),
-                    ],
-                  ),
-                  //STATS
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      //DIAGRAM
-                      SuperheavyEngineDiagram(
-                        superheavy: superheavy,
-                        height: 94,
-                        width: 94,
-                      ),
-                      IconStats(
-                        img_source: "",
-                        amount: superheavy.cryoproof,
-                        icon: CupertinoIcons.snow,
-                      ),
-                      IconStats(
-                        img_source: "",
-                        amount: superheavy.staticfire,
-                        icon: CupertinoIcons.flame,
-                      ),
-                      IconStats(
-                        img_source: "icons/flight_icon",
-                        amount: superheavy.flights,
-                        icon: CupertinoIcons.rocket,
-                      ),
-                    ],
-                  ),
-                ],
-              ),
+                    ),
+                  ],
+                ),
+                //STATS
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    //DIAGRAM
+                    SuperheavyEngineDiagram(
+                      superheavy: superheavy,
+                      height: 94,
+                      width: 94,
+                    ),
+                    IconStats(
+                      img_source: "",
+                      amount: superheavy.cryoproof,
+                      icon: CupertinoIcons.snow,
+                    ),
+                    IconStats(
+                      img_source: "",
+                      amount: superheavy.staticfire,
+                      icon: CupertinoIcons.flame,
+                    ),
+                    IconStats(
+                      img_source: "icons/flight_icon",
+                      amount: superheavy.flights,
+                      icon: CupertinoIcons.rocket,
+                    ),
+                  ],
+                ),
+              ],
             ),
-          ],
-        ));
+          ),
+        ],
+      ),
+    );
   }
 }
 
@@ -117,27 +120,28 @@ class SuperheavyEngineDiagram extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-        width: width,
-        height: height,
-        child: Stack(
-          children: [
-            superheavy.raptorCount == 29
-                ? SuperheavyEngineStack(
-                    isOldDesgin: true,
-                    isBodyReady: superheavy.parts[0],
-                    width: width,
-                    height: height,
-                    seaRaptorBooleans: superheavy.sea,
-                  )
-                : SuperheavyEngineStack(
-                    isOldDesgin: false,
-                    isBodyReady: superheavy.parts[0],
-                    width: width,
-                    height: height,
-                    seaRaptorBooleans: superheavy.sea,
-                  ),
-          ],
-        ));
+      width: width,
+      height: height,
+      child: Stack(
+        children: [
+          superheavy.raptorCount == 29
+              ? SuperheavyEngineStack(
+                  isOldDesgin: true,
+                  isBodyReady: superheavy.parts[0],
+                  width: width,
+                  height: height,
+                  seaRaptorBooleans: superheavy.sea,
+                )
+              : SuperheavyEngineStack(
+                  isOldDesgin: false,
+                  isBodyReady: superheavy.parts[0],
+                  width: width,
+                  height: height,
+                  seaRaptorBooleans: superheavy.sea,
+                ),
+        ],
+      ),
+    );
   }
 }
 
@@ -160,7 +164,7 @@ class SuperheavyEngineStack extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     //Out, Middle, Inner
-    List<int> oldSeaRCount = [0, 1, 2];
+    final List<int> oldSeaRCount = [0, 1, 2];
     return isOldDesgin
         ? Stack(
             //OLD

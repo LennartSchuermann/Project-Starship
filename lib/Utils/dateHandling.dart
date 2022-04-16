@@ -1,7 +1,12 @@
 // ignore_for_file: file_names, prefer_const_constructors_in_immutables, non_constant_identifier_names, must_be_immutable
 
+// Flutter imports:
 import 'package:flutter/cupertino.dart';
+
+// Package imports:
 import 'package:intl/intl.dart';
+
+// Project imports:
 import 'package:tankwatcher/Utils/scraper.dart';
 
 String getDayOfMonthSuffix(int dayNum) {
@@ -26,26 +31,20 @@ String getDayOfMonthSuffix(int dayNum) {
 }
 
 String getBCTime() {
-  var now = DateTime.now().toUtc();
+  final now = DateTime.now().toUtc();
 
-  var offsetDuration = new Duration();
+  var offsetDuration = const Duration();
   //BRUH THIS IS BULLSHIT
   if (now.day == 7 && now.month == 11 && now.hour == 2) {
-    offsetDuration = Duration(hours: -6);
+    offsetDuration = const Duration(hours: -6);
   } else {
-    offsetDuration = Duration(hours: -5);
+    offsetDuration = const Duration(hours: -5);
   }
 
-  DateTime newTime = now.add(offsetDuration);
-  var dt = DateFormat("yyyy-MM-dd HH:mm:ss")
-      .parse(newTime.toString(), false)
-      .toLocal();
-  return DateFormat('d').format(dt) +
-      getDayOfMonthSuffix(int.parse(DateFormat('d').format(dt))) +
-      " " +
-      DateFormat('MMM yyyy').format(dt) +
-      " | " +
-      DateFormat('HH:mm').format(dt);
+  final DateTime newTime = now.add(offsetDuration);
+  final dt =
+      DateFormat("yyyy-MM-dd HH:mm:ss").parse(newTime.toString()).toLocal();
+  return "${DateFormat('d').format(dt)}${getDayOfMonthSuffix(int.parse(DateFormat('d').format(dt)))} ${DateFormat('MMM yyyy').format(dt)} | ${DateFormat('HH:mm').format(dt)}";
 }
 
 String getMonthNr(String month) {
@@ -109,13 +108,15 @@ IconData getWeatherIcon(String? weatherDes) {
 bool isClosureLive(String des, String cl_date, String cl_time) {
   if (des == "Closure Scheduled" && getMonthNr(cl_date) != "0") {
     //"1969-07-20 20:18:04Z"
-    String year = cl_date.substring(cl_date.length - 4);
-    String day = cl_date.substring(cl_date.length - 8, cl_date.length - 6);
-    String month = getMonthNr(cl_date);
-    String finalDate = year + "-" + month + "-" + day.replaceAll(" ", "0");
+    final String year = cl_date.substring(cl_date.length - 4);
+    final String day =
+        cl_date.substring(cl_date.length - 8, cl_date.length - 6);
+    final String month = getMonthNr(cl_date);
+    final String finalDate = "$year-$month-${day.replaceAll(" ", "0")}";
 
-    DateTime closureDate = DateTime.parse(finalDate);
-    DateTime dateNow = DateTime.now().toUtc().add(const Duration(hours: -5));
+    final DateTime closureDate = DateTime.parse(finalDate);
+    final DateTime dateNow =
+        DateTime.now().toUtc().add(const Duration(hours: -5));
 
     if (closureDate.day == dateNow.day &&
         closureDate.month == dateNow.month &&
@@ -140,12 +141,14 @@ bool isCancled(String des) {
 bool isClosureGone(String cl_date, String cl_time) {
   if (getMonthNr(cl_date) != "0") {
     //"1969-07-20 20:18:04Z"
-    String year = cl_date.substring(cl_date.length - 4);
-    String day = cl_date.substring(cl_date.length - 8, cl_date.length - 6);
-    String month = getMonthNr(cl_date);
-    String finalDate = year + "-" + month + "-" + day.replaceAll(" ", "0");
-    DateTime closureDate = DateTime.parse(finalDate);
-    DateTime dateNow = DateTime.now().toUtc().add(const Duration(hours: -6));
+    final String year = cl_date.substring(cl_date.length - 4);
+    final String day =
+        cl_date.substring(cl_date.length - 8, cl_date.length - 6);
+    final String month = getMonthNr(cl_date);
+    final String finalDate = "$year-$month-${day.replaceAll(" ", "0")}";
+    final DateTime closureDate = DateTime.parse(finalDate);
+    final DateTime dateNow =
+        DateTime.now().toUtc().add(const Duration(hours: -6));
 
     if (closureDate.compareTo(dateNow.add(const Duration(hours: -24))) == -1)
       return true;
@@ -158,9 +161,9 @@ bool isClosureGone(String cl_date, String cl_time) {
 
 int getNextActiveClosure(String data) {
   if (data.isNotEmpty) {
-    List descriptions = getClosureInf(data.toString(), 5);
-    List times = getClosureInf(data.toString(), 4);
-    List dates = getClosureInf(data.toString(), 3);
+    final List descriptions = getClosureInf(data, 5);
+    final List times = getClosureInf(data, 4);
+    final List dates = getClosureInf(data, 3);
 
     for (var i = 0; i < getClosureAmount(data); i++) {
       if (!isClosureGone(dates[i], times[i]) && !isCancled(descriptions[i])) {
