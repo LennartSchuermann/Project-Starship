@@ -21,7 +21,7 @@ class AboutScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        padding: const EdgeInsets.all(0),
+        padding: EdgeInsets.zero,
         physics: const BouncingScrollPhysics(),
         children: [
           Padding(

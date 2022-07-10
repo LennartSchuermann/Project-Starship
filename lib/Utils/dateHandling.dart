@@ -33,7 +33,7 @@ String getDayOfMonthSuffix(int dayNum) {
 String getBCTime() {
   final now = DateTime.now().toUtc();
 
-  var offsetDuration = const Duration();
+  var offsetDuration = Duration.zero;
   //BRUH THIS IS BULLSHIT
   if (now.day == 7 && now.month == 11 && now.hour == 2) {
     offsetDuration = const Duration(hours: -6);
@@ -150,10 +150,11 @@ bool isClosureGone(String cl_date, String cl_time) {
     final DateTime dateNow =
         DateTime.now().toUtc().add(const Duration(hours: -6));
 
-    if (closureDate.compareTo(dateNow.add(const Duration(hours: -24))) == -1)
+    if (closureDate.compareTo(dateNow.add(const Duration(hours: -24))) == -1) {
       return true;
-    else
+    } else {
       return false;
+    }
   } else {
     return false;
   }

@@ -13,8 +13,8 @@ class EventsScreen extends StatelessWidget {
   List<Events> events;
 
   List<Events> doneEvents() {
-    List<Events> done = [];
-    for (Events event in events) {
+    final List<Events> done = [];
+    for (final Events event in events) {
       if (event.isDone) {
         done.add(event);
       }
@@ -23,8 +23,8 @@ class EventsScreen extends StatelessWidget {
   }
 
   List<Events> notDoneEvents() {
-    List<Events> notdone = [];
-    for (Events event in events) {
+    final List<Events> notdone = [];
+    for (final Events event in events) {
       if (!event.isDone) {
         notdone.add(event);
       }
@@ -36,7 +36,7 @@ class EventsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        padding: const EdgeInsets.all(0),
+        padding: EdgeInsets.zero,
         physics: const BouncingScrollPhysics(),
         children: [
           Padding(
@@ -82,7 +82,6 @@ class EventsScreen extends StatelessWidget {
                 const SizedBox(height: kDefaultPadding),
                 ListView.builder(
                   physics: const BouncingScrollPhysics(),
-                  scrollDirection: Axis.vertical,
                   shrinkWrap: true,
                   padding: const EdgeInsets.only(top: kDefaultPadding / 4),
                   itemCount: notDoneEvents().length,
@@ -115,7 +114,6 @@ class EventsScreen extends StatelessWidget {
                 const SizedBox(height: kDefaultPadding),
                 ListView.builder(
                   physics: const BouncingScrollPhysics(),
-                  scrollDirection: Axis.vertical,
                   shrinkWrap: true,
                   padding: const EdgeInsets.only(top: kDefaultPadding / 4),
                   itemCount: doneEvents().length,

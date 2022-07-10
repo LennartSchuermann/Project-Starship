@@ -21,14 +21,14 @@ import 'package:tankwatcher/design.dart';
 StarshipService starship_service = StarshipService();
 
 class HomeScreen extends StatefulWidget {
-  HomeScreen(
-      {Key? key,
-      this.closureData,
-      this.starshipData,
-      this.superHeavyData,
-      this.eventsData,
-      this.activityLogData})
-      : super(key: key);
+  HomeScreen({
+    Key? key,
+    this.closureData,
+    this.starshipData,
+    this.superHeavyData,
+    this.eventsData,
+    this.activityLogData,
+  }) : super(key: key);
 
   String? closureData;
   List? starshipData;
@@ -88,7 +88,7 @@ class _HomeScreenState extends State<HomeScreen>
           backdropColor: Theme.of(context).backgroundColor,
           parallaxEnabled: true,
           body: ListView(
-            padding: const EdgeInsets.all(0),
+            padding: EdgeInsets.zero,
             physics: const BouncingScrollPhysics(),
             children: [
               Padding(
@@ -257,7 +257,7 @@ class RoadClosureFeed extends StatelessWidget {
         ? getClosureInf(data.toString(), 3)[activeClosure].toString()
         : "0";
 
-    return (activeClosure != -1
+    return activeClosure != -1
         ? Column(
             children: [
               Row(
@@ -304,6 +304,6 @@ class RoadClosureFeed extends StatelessWidget {
               )
             ],
           )
-        : const SizedBox());
+        : const SizedBox();
   }
 }

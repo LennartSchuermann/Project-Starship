@@ -13,9 +13,12 @@ import 'package:tankwatcher/Widgets/SuperheavyCard.dart';
 import 'package:tankwatcher/design.dart';
 
 class InfoScreen extends StatelessWidget {
-  InfoScreen(
-      {Key? key, this.starship, this.superheavy, required this.isStarshipInfo})
-      : super(key: key);
+  InfoScreen({
+    Key? key,
+    this.starship,
+    this.superheavy,
+    required this.isStarshipInfo,
+  }) : super(key: key);
   bool isStarshipInfo;
   Starship? starship;
   Superheavy? superheavy;
@@ -62,7 +65,7 @@ class InfoScreen extends StatelessWidget {
 
     return Scaffold(
       body: ListView(
-        padding: const EdgeInsets.all(0),
+        padding: EdgeInsets.zero,
         physics: const BouncingScrollPhysics(),
         children: [
           Padding(
@@ -78,8 +81,6 @@ class InfoScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
                         Text(
                           isStarshipInfo

@@ -4,7 +4,7 @@
 import 'package:web_scraper/web_scraper.dart';
 
 // Project imports:
-import 'package:tankwatcher/Classes/fetchservice.dart';
+import 'package:tankwatcher/classes/fetchservice.dart';
 import 'package:tankwatcher/design.dart';
 
 final webScraper = WebScraper('https://www.cameroncountytx.gov/');
@@ -35,12 +35,10 @@ Future<String> getClosures() async {
   List<Map<String, dynamic>> elements = [];
   List<Map<String, dynamic>> rightElements = [];
   if (await webScraper.loadWebPage('spacex/')) {
-    final List content = webScraper.getPageContent().split(" ");
+    final List<String> content = webScraper.getPageContent().split(" ");
     for (final item in content) {
-      if (item.contains("vc_row-") as bool &&
-          !(item.contains("vc_row-fluid") as bool)) {
-        final String newid =
-            item.replaceAll('id="', "").replaceAll('"', "") as String;
+      if (item.contains("vc_row-") && !item.contains("vc_row-fluid")) {
+        final String newid = item.replaceAll('id="', "").replaceAll('"', "");
         //print(newid);
         final String newAdress =
             "#$newid> div > div > div > div.gem-table.gem-table-responsive.gem-table-style-1 > table > tbody'";
