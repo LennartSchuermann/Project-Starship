@@ -28,7 +28,7 @@ class NewsScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        padding: const EdgeInsets.all(0),
+        padding: EdgeInsets.zero,
         physics: const BouncingScrollPhysics(),
         children: [
           Padding(
@@ -77,7 +77,6 @@ class NewsScreen extends StatelessWidget {
                 ),
                 ListView.builder(
                   physics: const BouncingScrollPhysics(),
-                  scrollDirection: Axis.vertical,
                   shrinkWrap: true,
                   padding: const EdgeInsets.only(top: kDefaultPadding / 4),
                   itemCount: getClosureAmount(closures),
@@ -214,7 +213,6 @@ class ClosureCard extends StatelessWidget {
         ? Padding(
             padding: const EdgeInsets.only(bottom: kDefaultPadding),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Row(

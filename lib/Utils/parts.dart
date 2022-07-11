@@ -5,7 +5,7 @@ import 'package:tankwatcher/Classes/starship.dart';
 import 'package:tankwatcher/Classes/superheavy.dart';
 
 Starship getStarshipFleet(List<Starship> starships) {
-  for (var starship in starships) {
+  for (final starship in starships) {
     if (starship.isFleet) {
       return starship;
     }
@@ -14,7 +14,7 @@ Starship getStarshipFleet(List<Starship> starships) {
 }
 
 Superheavy getSuperHeavyFleet(List<Superheavy> superheavys) {
-  for (var superheavy in superheavys) {
+  for (final superheavy in superheavys) {
     if (superheavy.isFleet) {
       return superheavy;
     }

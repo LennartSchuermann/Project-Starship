@@ -1,7 +1,7 @@
 // Flutter imports:
 import 'package:flutter/cupertino.dart';
 
-List icons = [
+const List icons = [
   "icons/flight_icon",
   CupertinoIcons.flame,
   CupertinoIcons.snow,
@@ -16,7 +16,7 @@ List icons = [
   CupertinoIcons.arrow_2_circlepath
 ];
 
-List descriptions = [
+const List descriptions = [
   "Flights",
   "Static Fires",
   "Cryo Proof",

@@ -36,7 +36,7 @@ class _ContactWidgetState extends State<ContactWidget> {
     const userId = 'user_cq2pgt1VoP3xQwRJ3vPaw';
 
     final url = Uri.parse('https://api.emailjs.com/api/v1.0/email/send');
-    final response = await http.post(
+    await http.post(
       url,
       headers: {
         'origin': 'http://localhost',
@@ -102,9 +102,9 @@ class _ContactWidgetState extends State<ContactWidget> {
             GestureDetector(
               onTap: () {
                 String title, mail, msg;
-                title = titleController.text.toString();
-                mail = mailController.text.toString();
-                msg = msgController.text.toString();
+                title = titleController.text;
+                mail = mailController.text;
+                msg = msgController.text;
 
                 print("title:$title");
                 print("mail:$mail");

@@ -13,12 +13,12 @@ import 'package:tankwatcher/Widgets/SuperheavyCard.dart';
 import 'package:tankwatcher/design.dart';
 
 class FleetListScreen extends StatefulWidget {
-  FleetListScreen(
-      {Key? key,
-      required this.starships,
-      required this.superheavys,
-      required this.isStarshipList})
-      : super(key: key);
+  FleetListScreen({
+    Key? key,
+    required this.starships,
+    required this.superheavys,
+    required this.isStarshipList,
+  }) : super(key: key);
   bool isStarshipList;
   List<Starship> starships;
   List<Superheavy> superheavys;
@@ -33,7 +33,7 @@ class _FleetListScreenState extends State<FleetListScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       body: ListView(
-        padding: const EdgeInsets.all(0),
+        padding: EdgeInsets.zero,
         physics: const BouncingScrollPhysics(),
         children: [
           Padding(
@@ -88,7 +88,6 @@ class _FleetListScreenState extends State<FleetListScreen> {
                 //CARDS
                 ListView.builder(
                   physics: const BouncingScrollPhysics(),
-                  scrollDirection: Axis.vertical,
                   shrinkWrap: true,
                   padding: const EdgeInsets.only(top: kDefaultPadding / 4),
                   reverse: widget.reverseList,
